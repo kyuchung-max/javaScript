@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌석배치</title>
+    <style>
+        #container
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>좌석배치</h2>
+        <script>
+            var customer = prompt("입장객 수?");
+            var colNum = prompt("한 줄에 몇명?");
+            var rowNum;
+            if(customer % colNum === 0){
+                rowNum = parseInt(customer/colNum);
+            }
+            else{
+                    rowNum = parseInt(customer/colNum) +1;
+                
+            }
+            // customer/colNum;
+
+            for (var i=1; i<=rowNum; i++){
+                for(var j=0; j<=colNum; j++){
+                    var seatNum = i*colNum+j;
+                    if(seatNum> customer)
+                        break;
+                    document.write("좌석" + seatNum);
+                }
+                document.write('<br>');
+            }
+            
+        
+        </script>
+    </div>
+</body>
+</html>
