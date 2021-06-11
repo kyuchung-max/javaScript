@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산</title>
+</head>
+<body>
+    <h2>나이 계산 </h2>
+    <script>
+        function calc(){
+            const currentYear = 2021;
+            var birthYear = prompt("출생녀도를 입력" , "1");
+            var age;
+
+            age = currentYear - birthYear;
+            document.getElementById("show").innerHTML = ("현재 나이는" + age + "세 입니다.");
+        }
+    
+        
+
+    </script>
+    <button onclick="calc()">계산하기</button>
+    <hr>
+    <p id="show"></p>
+</body>
+</html>
